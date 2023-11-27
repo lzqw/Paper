@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="fixed-nav has-mouse"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v21.3 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>LINGO-1: Exploring Natural Language for Autonomous Driving - Wayve</title>
+	<meta name="description" content="Learn about how Wayve is using natural language to enhance the learning efficiency and explainability of its AI driving models. Our new open-loop driving commentator, LINGO, is a vision-language-action model that can improve how we improve the science of autonomous driving.">
+	<link rel="canonical" href="https://wayve.ai/thinking/lingo-natural-language-autonomous-driving/">
+	<meta property="og:locale" content="en_GB">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="LINGO-1: Exploring Natural Language for Autonomous Driving - Wayve">
+	<meta property="og:description" content="Learn about how Wayve is using natural language to enhance the learning efficiency and explainability of its AI driving models. Our new open-loop driving commentator, LINGO, is a vision-language-action model that can improve how we improve the science of autonomous driving.">
+	<meta property="og:url" content="https://wayve.ai/thinking/lingo-natural-language-autonomous-driving/">
+	<meta property="og:site_name" content="Wayve">
+	<meta property="article:published_time" content="2023-09-14T08:00:12+00:00">
+	<meta property="article:modified_time" content="2023-09-18T14:16:26+00:00">
+	<meta property="og:image" content="https://wayve.ai/wp-content/uploads/2023/09/Wayve-LINGO-1-blog-thumbnail-Header@0.25x.jpg">
+	<meta property="og:image:width" content="720">
+	<meta property="og:image:height" content="450">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="Rudi Rankin">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://wayve.ai/wp-content/uploads/2023/09/Wayve-LINGO-1-blog-thumbnail-Header@0.25x.jpg">
+	<meta name="twitter:creator" content="@wayve_ai">
+	<meta name="twitter:site" content="@wayve_ai">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Rudi Rankin">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://wayve.ai/thinking/lingo-natural-language-autonomous-driving/#article","isPartOf":{"@id":"https://wayve.ai/thinking/lingo-natural-language-autonomous-driving/"},"author":{"name":"Rudi Rankin","@id":"https://wayve.ai/#/schema/person/ed6182d2e2fb7ee11dd5c1aab651c139"},"headline":"LINGO-1: Exploring Natural Language for Autonomous Driving","datePublished":"2023-09-14T08:00:12+00:00","dateModified":"2023-09-18T14:16:26+00:00","mainEntityOfPage":{"@id":"https://wayve.ai/thinking/lingo-natural-language-autonomous-driving/"},"wordCount":7,"publisher":{"@id":"https://wayve.ai/#organization"},"image":{"@id":"https://wayve.ai/thinking/lingo-natural-language-autonomous-driving/#primaryimage"},"thumbnailUrl":"https://wayve.ai/wp-content/uploads/2023/07/LINGO-Blog-Hero.png","articleSection":["Research"],"inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://wayve.ai/thinking/lingo-natural-language-autonomous-driving/","url":"https://wayve.ai/thinking/lingo-natural-language-autonomous-driving/","name":"LINGO-1: Exploring Natural Language for Autonomous Driving - Wayve","isPartOf":{"@id":"https://wayve.ai/#website"},"primaryImageOfPage":{"@id":"https://wayve.ai/thinking/lingo-natural-language-autonomous-driving/#primaryimage"},"image":{"@id":"https://wayve.ai/thinking/lingo-natural-language-autonomous-driving/#primaryimage"},"thumbnailUrl":"https://wayve.ai/wp-content/uploads/2023/07/LINGO-Blog-Hero.png","datePublished":"2023-09-14T08:00:12+00:00","dateModified":"2023-09-18T14:16:26+00:00","description":"Learn about how Wayve is using natural language to enhance the learning efficiency and explainability of its AI driving models. Our new open-loop driving commentator, LINGO, is a vision-language-action model that can improve how we improve the science of autonomous driving.","breadcrumb":{"@id":"https://wayve.ai/thinking/lingo-natural-language-autonomous-driving/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://wayve.ai/thinking/lingo-natural-language-autonomous-driving/"]}]},{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://wayve.ai/thinking/lingo-natural-language-autonomous-driving/#primaryimage","url":"https://wayve.ai/wp-content/uploads/2023/07/LINGO-Blog-Hero.png","contentUrl":"https://wayve.ai/wp-content/uploads/2023/07/LINGO-Blog-Hero.png","width":2880,"height":1800,"caption":"Wayve Lingo, open-loop driving commentator"},{"@type":"BreadcrumbList","@id":"https://wayve.ai/thinking/lingo-natural-language-autonomous-driving/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wayve.ai/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wayve.ai/thinking/"},{"@type":"ListItem","position":3,"name":"LINGO-1: Exploring Natural Language for Autonomous Driving"}]},{"@type":"WebSite","@id":"https://wayve.ai/#website","url":"https://wayve.ai/","name":"Wayve","description":"","publisher":{"@id":"https://wayve.ai/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://wayve.ai/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-GB"},{"@type":"Organization","@id":"https://wayve.ai/#organization","name":"Wayve","url":"https://wayve.ai/","logo":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://wayve.ai/#/schema/logo/image/","url":"https://wayve.ai/wp-content/uploads/2022/11/Screenshot-2022-11-15-at-15.43.11.png","contentUrl":"https://wayve.ai/wp-content/uploads/2022/11/Screenshot-2022-11-15-at-15.43.11.png","width":538,"height":204,"caption":"Wayve"},"image":{"@id":"https://wayve.ai/#/schema/logo/image/"},"sameAs":["https://twitter.com/wayve_ai","https://www.youtube.com/c/wayve"]},{"@type":"Person","@id":"https://wayve.ai/#/schema/person/ed6182d2e2fb7ee11dd5c1aab651c139","name":"Rudi Rankin","image":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://wayve.ai/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/4c3128416f25a0c0fab618321c8ce651?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/4c3128416f25a0c0fab618321c8ce651?s=96&d=mm&r=g","caption":"Rudi Rankin"},"url":"https://wayve.ai/thinking/author/rudiwayve-ai/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="stylesheet" id="wayve-all-css" href="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/all.min.1696520246.css" type="text/css" media="all">
+<link rel="https://api.w.org/" href="https://wayve.ai/wp-json/"><link rel="alternate" type="application/json" href="https://wayve.ai/wp-json/wp/v2/posts/4713"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://wayve.ai/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.3.1">
+<link rel="shortlink" href="https://wayve.ai/?p=4713">
+<link rel="alternate" type="application/json+oembed" href="https://wayve.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwayve.ai%2Fthinking%2Flingo-natural-language-autonomous-driving%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://wayve.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwayve.ai%2Fthinking%2Flingo-natural-language-autonomous-driving%2F&amp;format=xml">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="https://wayve.ai/wp-content/themes/wayve/i/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://wayve.ai/wp-content/themes/wayve/i/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://wayve.ai/wp-content/themes/wayve/i/favicons/favicon-16x16.png">
+	<link rel="manifest" href="https://wayve.ai/wp-content/themes/wayve/i/favicons/site.webmanifest">
+	<link rel="mask-icon" href="https://wayve.ai/wp-content/themes/wayve/i/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="https://wayve.ai/wp-content/themes/wayve/i/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="/wp-content/themes/wayve/i/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	
+<style>
+
+	.background-dark-blue-with-gradient { 
+	background: #1a1830 linear-gradient(45deg, rgba(32,80,127,0) 0%, rgba(32,80,127,0) 50%, rgba(32,80,127,1) 100%);
+}
+.background-plain-dark-blue { 
+	 background-color: rgb(25,19,49);
+}
+.background-sunrise-gradient-04-animated { 
+}
+.background-sunrise-gradient-03-animated { 
+}
+.background-sunrise-gradient-01-animated { 
+}
+.background-night-gradient-05-animated { 
+}
+.background-night-gradient-02-animated { 
+}
+.background-night-gradient-01-animated { 
+}
+.background-dawn-gradient-03-animated { 
+}
+.background-dawn-gradient-01-animated { 
+}
+.background-2542 { 
+}
+.background-tenerife { 
+	 background: transparent url(https://wayve.ai/wp-content/uploads/2022/11/Wayve_gradient_site_size1-1920x560.jpg) 50% 50% no-repeat;
+background-size: cover;
+}
+.background-ibiza { 
+	 background: transparent url(https://wayve.ai/wp-content/uploads/2022/11/ibiza-bg.jpg) 50% 50% no-repeat;
+background-size: cover;
+}
+.background-salamanca { 
+	background: transparent linear-gradient(107deg, rgba(69, 64, 147, 0.2) 0%, rgba(227, 109, 65, 0.2) 100%) 0% 0% no-repeat padding-box;
+}
+.background-maspalomas { 
+	 background: transparent url(https://wayve.ai/wp-content/uploads/2022/11/people-spotlight-bg.jpg) 50% 50% no-repeat;
+background-size: cover;
+}
+.background-lanzarote { 
+	background: transparent linear-gradient(105deg,rgba(69,64,147,.08)0,rgba(227,109,65,.08)100%) 0 0 no-repeat padding-box;
+}
+.background-barcelona { 
+	 background: transparent url(https://wayve.ai/wp-content/uploads/2022/11/promo-delta-bg.jpg) 50% 50% no-repeat;
+background-size: cover;
+}
+.background-malaga { 
+	 background: transparent url(https://wayve.ai/wp-content/uploads/2022/11/Wayve_gradient_site_size2.jpg) 50% 50% no-repeat;
+background-size: cover;
+}
+.background-fuerteventura { 
+	 background: transparent url(https://wayve.ai/wp-content/uploads/2022/11/foxtrot-bg.jpg) 50% 50% no-repeat;
+background-size: cover;
+}
+.background-ronda { 
+	 background: transparent url(https://wayve.ai/wp-content/uploads/2022/11/Wayve_gradient_site_size3.jpg) 50% 50% no-repeat;
+background-size: cover;
+}
+.background-el-hierro { 
+	 background: transparent url(https://wayve.ai/wp-content/uploads/2022/11/promo-i-bg.jpg) 50% 50% no-repeat;
+background-size: cover;
+}
+.background-no-background-dark-text { 
+}
+.background-no-background-light-text { 
+}
+
+</style>
+
+<script>
+	var VIDEO_BACKGROUNDS = [];
+
+		VIDEO_BACKGROUNDS['background-sunrise-gradient-04-animated'] = 'https://wayve.ai/wp-content/uploads/2023/01/Sunrise-Gradient-04.mp4'
+VIDEO_BACKGROUNDS['background-sunrise-gradient-03-animated'] = 'https://wayve.ai/wp-content/uploads/2023/01/Sunrise-Gradient-03.mp4'
+VIDEO_BACKGROUNDS['background-sunrise-gradient-01-animated'] = 'https://wayve.ai/wp-content/uploads/2023/01/Sunrise-Gradient-01.mp4'
+VIDEO_BACKGROUNDS['background-night-gradient-05-animated'] = 'https://wayve.ai/wp-content/uploads/2023/01/Night-Gradient-05.mp4'
+VIDEO_BACKGROUNDS['background-night-gradient-02-animated'] = 'https://wayve.ai/wp-content/uploads/2023/01/Night-Gradient-02.mp4'
+VIDEO_BACKGROUNDS['background-night-gradient-01-animated'] = 'https://wayve.ai/wp-content/uploads/2023/01/Night-Gradient-01.mp4'
+VIDEO_BACKGROUNDS['background-dawn-gradient-03-animated'] = 'https://wayve.ai/wp-content/uploads/2023/01/Dawn-Gradient-03.mp4'
+VIDEO_BACKGROUNDS['background-dawn-gradient-01-animated'] = 'https://wayve.ai/wp-content/uploads/2023/01/Dawn-Gradient-01.mp4'
+VIDEO_BACKGROUNDS['background-2542'] = 'https://wayve.ai/wp-content/uploads/2022/12/Dawn-Gradient-02.mp4'
+
+</script>
+
+
+</head>
+
+<body class="post-template-default single single-post postid-4713 single-format-standard">
+		
+	<header>
+				<div class="content">
+			<a class="logo-link" aria-label="Homepage" href="https://wayve.ai/"><svg enable-background="new 6 43 143 49" height="49" viewBox="6 43 143 49" width="143" xmlns="http://www.w3.org/2000/svg"><path d="m72.239 73.781-3.27-12.508-.019-.075c0-.111.068-.167.203-.167h2.292c.124 0 .203.062.24.186l1.755 7.521c.013.049.03.074.056.074s.042-.025.056-.074l1.7-7.502c.037-.135.117-.203.24-.203h2.235c.135 0 .222.062.259.186l1.847 7.521c.013.035.03.059.056.064.024.006.043-.018.055-.064l1.7-7.502c.037-.135.118-.203.24-.203h2.181c.174 0 .239.081.203.24l-3.03 12.508c-.036.123-.124.188-.259.188h-2.199c-.124 0-.203-.064-.24-.188l-1.884-8c-.012-.049-.029-.075-.055-.075s-.043.025-.056.075l-1.756 7.98c-.025.137-.105.205-.24.205h-2.049c-.136 0-.222-.062-.259-.188h-.002z"></path><path d="m97.849 73.781-.555-1.811c-.025-.049-.056-.074-.092-.074h-4.545c-.037 0-.068.025-.093.074l-.536 1.811c-.035.125-.116.188-.238.188h-2.348c-.074 0-.13-.021-.166-.066-.036-.043-.044-.107-.02-.193l3.991-12.49c.037-.124.117-.186.24-.186h2.899c.125 0 .204.062.24.186l3.991 12.49c.012.025.02.055.02.094 0 .109-.067.166-.204.166h-2.347c-.121-.001-.2-.064-.237-.189zm-4.544-3.898h3.251c.076 0 .099-.035.076-.109l-1.664-5.487c-.014-.049-.03-.071-.057-.065-.024.006-.042.027-.056.065l-1.624 5.487c-.012.074.012.109.074.109z"></path><path d="m109.059 73.885c-.044-.045-.066-.096-.066-.158v-4.674c0-.051-.006-.086-.018-.113l-3.808-7.647c-.024-.049-.037-.085-.037-.111 0-.099.069-.147.204-.147h2.328c.123 0 .209.056.259.166l2.309 4.915c.037.074.074.074.11 0l2.31-4.915c.05-.11.136-.166.259-.166h2.364c.086 0 .145.022.176.065.03.042.026.108-.009.193l-3.844 7.647c-.013.027-.018.062-.018.113v4.674c0 .062-.023.113-.066.158-.043.041-.095.062-.156.062h-2.143c-.062 0-.114-.02-.156-.062z"></path><path d="m125.898 73.781-3.808-12.489-.018-.074c0-.124.066-.186.202-.186h2.328c.135 0 .222.062.258.186l2.459 9.017c.013.037.029.057.056.057.024 0 .043-.02.055-.057l2.42-9.017c.037-.124.125-.186.259-.186h2.272c.074 0 .13.025.168.075.034.049.041.111.018.185l-3.862 12.489c-.034.125-.116.188-.238.188h-2.328c-.124 0-.204-.062-.238-.188z"></path><path d="m148.362 63.203c-.043.043-.095.065-.157.065h-6.06c-.062 0-.091.032-.091.092v2.864c0 .062.029.092.091.092h3.973c.062 0 .114.022.157.065s.064.095.064.158v1.792c0 .062-.021.115-.064.158s-.095.062-.157.062h-3.973c-.062 0-.091.031-.091.094v2.994c0 .061.029.092.091.092h6.06c.062 0 .114.021.157.064.042.043.065.096.065.156v1.793c0 .062-.023.113-.065.156-.043.043-.095.066-.157.066h-8.536c-.062 0-.115-.021-.157-.066-.043-.043-.064-.094-.064-.156v-12.49c0-.062.021-.114.064-.157.042-.043.095-.065.157-.065h8.536c.062 0 .114.022.157.065.042.043.065.095.065.157v1.792c.001.062-.023.114-.065.157z"></path><path d="m51.868 57.757c-.803-1.811-1.291-2.989-2.486-4.546-.278-.362-.511-.639-.511-.639-1.169-.375-2.188.553-1.945 1.769.074.09.15.182.219.274 2.753 3.57 4.039 7.731 4.039 13.057 0 4.37-2.491 9.479-9.513 9.499h-.03c-5.148 0-9.285-3.789-9.621-8.818-.063-.948-.076-4.329 2.447-8.022 2.157-3.238 6.956-7.218 12.956-9.829.482-.201.972-.398 1.472-.59.097-.035.141-.063.143-.089-3.335-.637-7.94-.766-13.51.538-2.718.598-5.303 1.434-7.685 2.485-8.685 3.832-15.547 11.017-18.281 19.019-.658-3.125-.603-6.376.171-9.472 1.166-4.665 3.794-8.681 7.605-11.615 3.698-2.847 8.285-4.414 12.917-4.414 1.719 0 3.443.212 5.124.633l.051.013.049.012c.379.099 1.605.447 2.672.838.068.013.136.032.204.059.246-.035.53-.082.854-.123h.009v-.001c1.23-.141 2.496-.238 3.685-.303-.394-.246-.793-.482-1.2-.706-1.787-.988-3.707-1.746-5.712-2.248-6.137-1.533-12.504-.583-17.928 2.673-5.424 3.255-9.254 8.428-10.789 14.567-.497 1.989-.728 4.022-.7 6.048.169 11.381 8.36 20.813 19.167 22.913l-.005.02c.763.145 1.54.252 2.326.322.511.055 1.096.098 1.769.098.068 0 .135 0 .2-.002.055 0 .111.002.167.002.852 0 1.691-.059 2.518-.135.892-.08 1.373-.277 1.318-.52-.05-.219-.631-.316-.959-.42-1.107-.348-2.049-.771-2.984-1.354-.209-.139-.435-.295-.676-.471-.933-.713-1.797-1.529-2.571-2.422-2.826-3.271-4.246-7.293-4.223-11.947.027-5.16 1.78-9.618 5.208-13.251 2.144-2.271 5.003-4.283 8.518-5.996l1.256-.971c-.628.49-1.32 1.062-2.106 1.737-3.516 2.898-5.063 6.129-5.705 9.048-.352 1.391-.5 2.771-.414 4.053.431 6.436 5.698 11.279 12.257 11.279h.037c3.336-.008 6.251-1.131 8.463-3.16 2.413-2.211 3.686-5.314 3.686-8.981 0-3.437-.565-6.774-1.958-9.914zm-32.162 16.138c-.035 6.748 2.697 11.307 4.996 13.941.028.033.059.066.089.1-.162-.043-.324-.088-.482-.133-.152-.045-.277-.082-.392-.117-.49-.156-.761-.244-1.075-.367-.071-.029-.152-.061-.237-.096-.371-.145-.695-.279-.988-.414-2.673-1.211-5.032-2.939-7.009-5.135-.139-.164-.282-.332-.431-.508-1.352-1.604-2.108-3.66-2.132-5.795-.012-1.133.178-2.244.564-3.309 1.667-4.569 4.854-8.814 9.219-12.272 2.972-2.357 6.094-4.214 9.21-5.492-7.479 4.825-11.285 11.399-11.327 19.596h-.005z"></path></svg></a>
+
+			<a class="hamburger" aria-label="Open navigation" href="#">
+				<svg width="28px" height="19px" viewBox="0 0 28 19">
+				<line x1="0" y1="1.5" x2="28" y2="1.5"></line>
+				<line x1="0" y1="9.5" x2="28" y2="9.5"></line>
+				<line x1="0" y1="17.5" x2="28" y2="17.5"></line>
+				</svg>
+				<svg class="close" width="28px" height="19px" viewBox="0 0 28 19">
+				<line x1="6" y1="1.562" x2="22.031" y2="17.594"></line>
+				<line x1="6" y1="17.594" x2="22.031" y2="1.562"></line>
+				</svg>
+			</a>
+
+			<div class="primary-menu-container">
+				<ul>
+			<li class="has-submenu" data-submenu-id="21"><a href="https://wayve.ai/technology/">Technology</a><a class="show-submenu" aria-label="Show submenu" href="#"></a></li>
+<li class="has-submenu" data-submenu-id="2269"><a href="https://wayve.ai/partners/">Partners</a><a class="show-submenu" aria-label="Show submenu" href="#"></a></li>
+<li class="has-submenu" data-submenu-id="20"><a href="https://wayve.ai/safety/">Safety</a><a class="show-submenu" aria-label="Show submenu" href="#"></a></li>
+<li class="has-submenu" data-submenu-id="19"><a href="https://wayve.ai/careers/">Careers</a><a class="show-submenu" aria-label="Show submenu" href="#"></a></li>
+<li class="has-submenu" data-submenu-id="1086"><a href="https://wayve.ai/company/">Company</a><a class="show-submenu" aria-label="Show submenu" href="#"></a></li>
+<li class="has-submenu" data-submenu-id="83"><a href="https://wayve.ai/thinking/">Blog</a><a class="show-submenu" aria-label="Show submenu" href="#"></a></li>
+				</ul>
+
+				<div class="hamburger-submenu-container">
+					
+
+<div class="submenu" data-submenu-id="21">
+	<div class="content">
+		<div class="left">
+			<a href="https://wayve.ai/technology/">
+				<div class="title"><span class="page-name">Technology</span></div>
+				<div class="excerpt">
+					<p>A new way to solve self-driving with artificial intelligence</p>
+				</div>
+							</a>
+		</div>
+		<div class="right">
+			<a href="https://wayve.ai/technology/av2-0/">
+			<div class="title"><span class="page-name">AV2.0</span></div>
+			<p>The next wave of AV technology</p>
+		</a>
+
+			<a href="https://wayve.ai/technology/wayve-ai-driver/">
+			<div class="title"><span class="page-name">Wayve AI Driver</span></div>
+			<p>Powering tomorrow’s autonomous vehicles</p>
+		</a>
+
+			<a href="https://wayve.ai/technology/fleet-learning-technology/">
+			<div class="title"><span class="page-name">Fleet Learning Technology</span></div>
+			<p>Training, evaluating and deploying foundation models for autonomy</p>
+		</a>
+
+			<a href="https://wayve.ai/science/">
+			<div class="title"><span class="page-name">Science</span></div>
+			<p class="p1">Advancing end-to-end autonomous driving research</p>
+		</a>
+
+			<a class="back-link" href="#">Back</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="submenu" data-submenu-id="2269">
+	<div class="content">
+		<div class="left">
+			<a href="https://wayve.ai/partners/">
+				<div class="title"><span class="page-name">Partners</span></div>
+				<div class="excerpt">
+					<p>Our world-class partners enable us to take the fastest route to a safe and scalable AI Driver</p>
+				</div>
+							</a>
+		</div>
+		<div class="right">
+			<a href="https://wayve.ai/partners/automotive/">
+			<div class="title"><span class="page-name">Automotive</span></div>
+			<p>Enabling automakers unlock all levels of driving automation at scale</p>
+		</a>
+
+			<a href="https://wayve.ai/partners/fleet-partners/">
+			<div class="title"><span class="page-name">Fleet Partners</span></div>
+			<p>Bringing the future of autonomous delivery to customers today</p>
+		</a>
+
+			<a href="https://wayve.ai/partners/development-partners/">
+			<div class="title"><span class="page-name">Development Partners</span></div>
+			<p>Building the infrastructure and development engine for AV2.0</p>
+		</a>
+
+			<a class="back-link" href="#">Back</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="submenu" data-submenu-id="20">
+	<div class="content">
+		<div class="left">
+			<a href="https://wayve.ai/safety/">
+				<div class="title"><span class="page-name">Safety</span></div>
+				<div class="excerpt">
+					<p>Safety is at the heart of everything we do at Wayve</p>
+				</div>
+							</a>
+		</div>
+		<div class="right">
+			<a href="https://wayve.ai/safety/safety-framework/">
+			<div class="title"><span class="page-name">Safety framework</span></div>
+			<p>How we design, test and deploy our autonomous driving technology</p>
+		</a>
+
+			<a href="https://wayve.ai/safety/how-we-test/">
+			<div class="title"><span class="page-name">How we test</span></div>
+			<p>We test extensively in simulation, on closed courses, and on the road</p>
+		</a>
+
+			<a href="https://wayve.ai/safety/seen-a-wayve-vehicle-near-you/">
+			<div class="title"><span class="page-name">Seen a Wayve vehicle near you?</span></div>
+			<p>We answer all your questions about automated vehicles</p>
+		</a>
+
+			<a class="back-link" href="#">Back</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="submenu" data-submenu-id="19">
+	<div class="content">
+		<div class="left">
+			<a href="https://wayve.ai/careers/">
+				<div class="title"><span class="page-name">Careers</span></div>
+				<div class="excerpt">
+					<p>Wayve is a place where you can do your best work</p>
+				</div>
+							</a>
+		</div>
+		<div class="right">
+			<a href="https://wayve.ai/careers/life-at-wayve/">
+			<div class="title"><span class="page-name">Life at Wayve</span></div>
+			<p>A place where you can do your best work and thrive</p>
+		</a>
+
+			<a href="https://wayve.ai/careers/people/">
+			<div class="title"><span class="page-name">Our people</span></div>
+			<p>Meet the Wayve Makers</p>
+		</a>
+
+			<a href="https://wayve.ai/careers/diversity-equity-inclusion/">
+			<div class="title"><span class="page-name">Diversity, Equity &amp; Inclusion</span></div>
+			<p>We strive to create a more equitable world</p>
+		</a>
+
+			<a href="https://wayve.ai/careers/join-us/">
+			<div class="title"><span class="page-name">Join us</span></div>
+			<p>All of our currently available roles</p>
+		</a>
+
+			<a class="back-link" href="#">Back</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="submenu" data-submenu-id="1086">
+	<div class="content">
+		<div class="left">
+			<a href="https://wayve.ai/company/">
+				<div class="title"><span class="page-name">Company</span></div>
+				<div class="excerpt">
+					<p>We are proudly reimagining autonomous mobility</p>
+				</div>
+							</a>
+		</div>
+		<div class="right">
+			<a href="https://wayve.ai/company/our-journey/">
+			<div class="title"><span class="page-name">Our journey</span></div>
+			<p>How we started and where we are today</p>
+		</a>
+
+			<a href="https://wayve.ai/company/leadership-team/">
+			<div class="title"><span class="page-name">Leadership</span></div>
+			<p>Meet the people leading Wayve</p>
+		</a>
+
+			<a href="https://wayve.ai/company/investors/">
+			<div class="title"><span class="page-name">Investors</span></div>
+			<p>We’re proud to be backed by investors who share our vision</p>
+		</a>
+
+			<a href="https://wayve.ai/company/data-privacy/">
+			<div class="title"><span class="page-name">Data privacy</span></div>
+			<p>How we protect individuals’ data</p>
+		</a>
+
+			<a class="back-link" href="#">Back</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="submenu" data-submenu-id="83">
+	<div class="content">
+		<div class="left">
+			<a href="https://wayve.ai/thinking/">
+				<div class="title"><span class="page-name">Blog</span></div>
+				<div class="excerpt">
+									</div>
+							</a>
+		</div>
+		<div class="right">
+			<a href="https://wayve.ai/thinking/">
+			<div class="title"><span class="page-name">Company blog</span></div>
+			<div>
+<p>Insights. Ideas. Research.</p>
+</div>
+		</a>
+
+			<a href="https://wayve.ai/press/">
+			<div class="title"><span class="page-name">Company news</span></div>
+			<div>
+<p>Stay up-to-date with what’s new at Wayve</p>
+</div>
+		</a>
+
+			<a class="back-link" href="#">Back</a>
+		</div>
+	</div>
+</div>
+				</div>
+
+
+			</div>
+		</div>
+
+		<div class="submenu-container">
+		
+
+<div class="submenu" data-submenu-id="21">
+	<div class="content">
+		<div class="left">
+			<a href="https://wayve.ai/technology/">
+				<div class="title"><span class="page-name">Technology</span></div>
+				<div class="excerpt">
+					<p>A new way to solve self-driving with artificial intelligence</p>
+				</div>
+							</a>
+		</div>
+		<div class="right">
+			<a href="https://wayve.ai/technology/av2-0/">
+			<div class="title"><span class="page-name">AV2.0</span></div>
+			<p>The next wave of AV technology</p>
+		</a>
+
+			<a href="https://wayve.ai/technology/wayve-ai-driver/">
+			<div class="title"><span class="page-name">Wayve AI Driver</span></div>
+			<p>Powering tomorrow’s autonomous vehicles</p>
+		</a>
+
+			<a href="https://wayve.ai/technology/fleet-learning-technology/">
+			<div class="title"><span class="page-name">Fleet Learning Technology</span></div>
+			<p>Training, evaluating and deploying foundation models for autonomy</p>
+		</a>
+
+			<a href="https://wayve.ai/science/">
+			<div class="title"><span class="page-name">Science</span></div>
+			<p class="p1">Advancing end-to-end autonomous driving research</p>
+		</a>
+
+			<a class="back-link" href="#">Back</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="submenu" data-submenu-id="2269">
+	<div class="content">
+		<div class="left">
+			<a href="https://wayve.ai/partners/">
+				<div class="title"><span class="page-name">Partners</span></div>
+				<div class="excerpt">
+					<p>Our world-class partners enable us to take the fastest route to a safe and scalable AI Driver</p>
+				</div>
+							</a>
+		</div>
+		<div class="right">
+			<a href="https://wayve.ai/partners/automotive/">
+			<div class="title"><span class="page-name">Automotive</span></div>
+			<p>Enabling automakers unlock all levels of driving automation at scale</p>
+		</a>
+
+			<a href="https://wayve.ai/partners/fleet-partners/">
+			<div class="title"><span class="page-name">Fleet Partners</span></div>
+			<p>Bringing the future of autonomous delivery to customers today</p>
+		</a>
+
+			<a href="https://wayve.ai/partners/development-partners/">
+			<div class="title"><span class="page-name">Development Partners</span></div>
+			<p>Building the infrastructure and development engine for AV2.0</p>
+		</a>
+
+			<a class="back-link" href="#">Back</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="submenu" data-submenu-id="20">
+	<div class="content">
+		<div class="left">
+			<a href="https://wayve.ai/safety/">
+				<div class="title"><span class="page-name">Safety</span></div>
+				<div class="excerpt">
+					<p>Safety is at the heart of everything we do at Wayve</p>
+				</div>
+							</a>
+		</div>
+		<div class="right">
+			<a href="https://wayve.ai/safety/safety-framework/">
+			<div class="title"><span class="page-name">Safety framework</span></div>
+			<p>How we design, test and deploy our autonomous driving technology</p>
+		</a>
+
+			<a href="https://wayve.ai/safety/how-we-test/">
+			<div class="title"><span class="page-name">How we test</span></div>
+			<p>We test extensively in simulation, on closed courses, and on the road</p>
+		</a>
+
+			<a href="https://wayve.ai/safety/seen-a-wayve-vehicle-near-you/">
+			<div class="title"><span class="page-name">Seen a Wayve vehicle near you?</span></div>
+			<p>We answer all your questions about automated vehicles</p>
+		</a>
+
+			<a class="back-link" href="#">Back</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="submenu" data-submenu-id="19">
+	<div class="content">
+		<div class="left">
+			<a href="https://wayve.ai/careers/">
+				<div class="title"><span class="page-name">Careers</span></div>
+				<div class="excerpt">
+					<p>Wayve is a place where you can do your best work</p>
+				</div>
+							</a>
+		</div>
+		<div class="right">
+			<a href="https://wayve.ai/careers/life-at-wayve/">
+			<div class="title"><span class="page-name">Life at Wayve</span></div>
+			<p>A place where you can do your best work and thrive</p>
+		</a>
+
+			<a href="https://wayve.ai/careers/people/">
+			<div class="title"><span class="page-name">Our people</span></div>
+			<p>Meet the Wayve Makers</p>
+		</a>
+
+			<a href="https://wayve.ai/careers/diversity-equity-inclusion/">
+			<div class="title"><span class="page-name">Diversity, Equity &amp; Inclusion</span></div>
+			<p>We strive to create a more equitable world</p>
+		</a>
+
+			<a href="https://wayve.ai/careers/join-us/">
+			<div class="title"><span class="page-name">Join us</span></div>
+			<p>All of our currently available roles</p>
+		</a>
+
+			<a class="back-link" href="#">Back</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="submenu" data-submenu-id="1086">
+	<div class="content">
+		<div class="left">
+			<a href="https://wayve.ai/company/">
+				<div class="title"><span class="page-name">Company</span></div>
+				<div class="excerpt">
+					<p>We are proudly reimagining autonomous mobility</p>
+				</div>
+							</a>
+		</div>
+		<div class="right">
+			<a href="https://wayve.ai/company/our-journey/">
+			<div class="title"><span class="page-name">Our journey</span></div>
+			<p>How we started and where we are today</p>
+		</a>
+
+			<a href="https://wayve.ai/company/leadership-team/">
+			<div class="title"><span class="page-name">Leadership</span></div>
+			<p>Meet the people leading Wayve</p>
+		</a>
+
+			<a href="https://wayve.ai/company/investors/">
+			<div class="title"><span class="page-name">Investors</span></div>
+			<p>We’re proud to be backed by investors who share our vision</p>
+		</a>
+
+			<a href="https://wayve.ai/company/data-privacy/">
+			<div class="title"><span class="page-name">Data privacy</span></div>
+			<p>How we protect individuals’ data</p>
+		</a>
+
+			<a class="back-link" href="#">Back</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="submenu" data-submenu-id="83">
+	<div class="content">
+		<div class="left">
+			<a href="https://wayve.ai/thinking/">
+				<div class="title"><span class="page-name">Blog</span></div>
+				<div class="excerpt">
+									</div>
+							</a>
+		</div>
+		<div class="right">
+			<a href="https://wayve.ai/thinking/">
+			<div class="title"><span class="page-name">Company blog</span></div>
+			<div>
+<p>Insights. Ideas. Research.</p>
+</div>
+		</a>
+
+			<a href="https://wayve.ai/press/">
+			<div class="title"><span class="page-name">Company news</span></div>
+			<div>
+<p>Stay up-to-date with what’s new at Wayve</p>
+</div>
+		</a>
+
+			<a class="back-link" href="#">Back</a>
+		</div>
+	</div>
+</div>
+
+			<div class="submenu-footer">
+				<div class="menu-mega-menu-bottom-navigation-container"><ul id="menu-mega-menu-bottom-navigation" class="menu"><li id="menu-item-2964" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2964"><a href="https://wayve.ai/company/investors/">Investors</a></li>
+<li id="menu-item-2965" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2965"><a href="https://wayve.ai/partners/">Partners</a></li>
+<li id="menu-item-2966" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2966"><a href="https://wayve.ai/press/">Company news</a></li>
+<li id="menu-item-2963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2963"><a href="https://wayve.ai/contact/">Contact</a></li>
+</ul></div>
+				<div class="social">
+				<a class="twitter" href="https://twitter.com/wayve_ai">twitter</a>
+<a class="linkedin" href="https://www.linkedin.com/company/wayve-technologies/">linkedin</a>
+<a class="youtube" href="https://www.youtube.com/c/wayve">youtube</a>
+		            	
+	            </div>
+
+			</div>
+		</div>
+
+
+
+	</header>
+
+
+<main>
+
+
+
+<article class="blog-post">
+
+	<div class="blog-intro-container">
+		<p class="date">14 September 2023&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;<a href="https://wayve.ai/thinking/category/research/">Research</a></p>
+		<h1 class="">LINGO-1: Exploring Natural Language for Autonomous Driving</h1>
+
+
+		<div class="intro">
+			<p>At Wayve, we use natural language to enhance the learning and 
+explainability of our foundation driving models. In this blog, we 
+introduce LINGO-1, an open-loop driving commentator that combines 
+vision, language and action to enhance how we interpret, explain and 
+train our foundation driving models.</p>
+		</div>
+		<div class="blog-meta">
+			<div>
+							</div>
+			<div>
+				<span class="reading-time" title="16.799999999999997 calories burned
+Earth revolved 3 degrees
+0.0036666666mm Hair grown">12 minute read</span>
+			</div>
+		</div>
+	</div>
+
+<img width="1920" height="1200" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve-LINGO-1-Blog-Header-Image-1920x1200.jpg" class="hero-image" alt="Wayve Lingo, open-loop driving commentator" decoding="async" fetchpriority="high" srcset="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve-LINGO-1-Blog-Header-Image-1920x1200.jpg 1920w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve-LINGO-1-Blog-Header-Image-300x188.jpg 300w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve-LINGO-1-Blog-Header-Image-1024x640.jpg 1024w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve-LINGO-1-Blog-Header-Image-768x480.jpg 768w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve-LINGO-1-Blog-Header-Image-1536x960.jpg 1536w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve-LINGO-1-Blog-Header-Image-2048x1280.jpg 2048w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve-LINGO-1-Blog-Header-Image-960x600.jpg 960w" sizes="(max-width: 1920px) 100vw, 1920px"><div class="copy  margins-none">
+	<div class="content">
+	<h2>Introduction to Vision-Language-Action Models (VLAMs)</h2>
+<p><span style="font-weight: 400;">The influence of large language 
+models (LLMs) in this era of artificial intelligence is all around us. 
+In recent years, we’ve seen the rise of LLMs that use self-supervised 
+learning on vast internet-scale datasets to produce human-like responses
+ to natural language queries. These models have transformed deep 
+learning and generative AI, which are now being used to automate 
+numerous tasks. They have also led to growing interest in 
+vision-language models (VLMs), which blend the reasoning capabilities of
+ LLMs with images and videos to perform various tasks such as image 
+classification, text-to-image retrieval, and visual question answering (</span><i><span style="font-weight: 400;">i.e.</span></i><span style="font-weight: 400;">
+ answering questions about an image using natural language) with 
+impressive accuracy. At Wayve, we are taking this one step further by 
+exploring vision-language-action models (VLAMs) that incorporate three 
+kinds of information: images, driving data, and now language.&nbsp;</span></p>
+<p><span style="font-weight: 400;">The use of natural language in 
+training robots is still in its infancy, particularly in autonomous 
+driving. Incorporating language along with vision and action may have an
+ enormous impact as a new modality to enhance how we interpret, explain 
+and train our foundation driving models. By foundation driving models, 
+we mean models that can perform several driving tasks, including 
+perception (perceiving the world around them), causal and counterfactual
+ reasoning (making sense of what they see), and planning (determining 
+the appropriate sequence of actions). We can use language to explain the
+ causal factors in the driving scene, which may enable faster training 
+and generalisation to new environments.</span></p>
+<p>We can also use language to probe models with questions about the 
+driving scene to more intuitively understand what it comprehends. This 
+capability can provide insights that could help us improve our driving 
+models’ reasoning and decision-making capabilities. Equally exciting, 
+VLAMs open up the possibility of interacting with driving models through
+ dialogue, where users can ask autonomous vehicles what they are doing 
+and why. This could significantly impact the public’s perception of this
+ technology, building confidence and trust in its capabilities.</p>
+<p>In addition to having a foundation driving model with broad 
+capabilities, it is also eminently desirable for it to efficiently learn
+ new tasks and quickly adapt to new domains and scenarios where we have 
+small training samples. Here is where natural language could add value 
+in supporting faster learning. For instance, we can imagine a scenario 
+where a corrective driving action is accompanied by a natural language 
+description of incorrect and correct behaviour in this situation. This 
+extra supervision can enhance few-shot adaptations of the foundation 
+model. With these ideas in mind, our Science team is exploring using 
+natural language to build foundation models for end-to-end autonomous 
+driving.</p>
+	</div>
+</div>
+<section class="pull-quote">
+	<p>As we push the boundaries of what’s possible with embodied AI, 
+vision-language-action models may have an enormous impact, as language 
+provides a new modality to enhance how we interpret, explain and train 
+our foundation driving models.</p>
+	<div class="quoter">
+			</div>
+</section><div class="copy  margins-none">
+	<div class="content">
+	<h2>Introducing LINGO-1, an open-loop driving commentator</h2>
+<p>In this first blog on VLAMs, we showcase how we’re building natural 
+language driving datasets using our fleet and the results of using this 
+dataset to train LINGO-1, <em>an open-loop driving commentator.</em></p>
+<p><span style="font-weight: 400;">A key feature in the development of LINGO-1 is our creation of a </span><i><span style="font-weight: 400;">scalable and diverse </span></i><span style="font-weight: 400;">dataset
+ that incorporates image, language and action data gathered from our 
+expert drivers commentating as they drive around the UK. The commentary 
+technique is reminiscent of </span><a href="https://en.wikipedia.org/wiki/Roadcraft"><span style="font-weight: 400;">roadcraft</span></a><span style="font-weight: 400;">
+ used by professional driving instructors in their lessons: instructors 
+say interesting aspects of the scene aloud and justify their driving 
+actions using short phrases, helping their students learn by example. 
+Here are some examples of what our expert drivers might describe, which 
+affects their actions or draws attention to safe driving:&nbsp;</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">slowing down for a lead vehicle or a change in traffic lights,&nbsp;</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">changing lanes to follow a route,&nbsp;</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">accelerating to the speed limit,&nbsp;</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">noticing other cars coming onto the road or stopped at an intersection</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">approaching hazards such as roundabouts and Give Way signs,&nbsp;</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">parked cars, traffic lights or schools,</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">actions other road users are taking, such as changing lanes or overtaking parked vehicles,</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">cyclists and pedestrians waiting at zebra crossings or coming up from behind the car in a cycle lane. </span></li>
+</ul>
+<p><span style="font-weight: 400;">When these phrases are temporally 
+synchronised with sensory images and low-level driving actions, we 
+obtain a rich vision-language-action dataset to train models for diverse
+ tasks.&nbsp;</span></p>
+<p><span style="font-weight: 400;">Our driving commentary data enhances 
+our standard expert driving dataset collection without compromising the 
+rate at which we collect expert driving data—enabling a cost-effective 
+approach to gather another layer of supervision through natural 
+language. We train each expert driver to follow a commentary protocol to
+ maintain dataset quality. This protocol includes paying attention to 
+the relevance and density of words spoken, the temporal synchronisation 
+between commentary and driving actions, and the terminology used to 
+describe events.</span></p>
+	</div>
+</div><div class="copy  margins-none">
+	<div class="content">
+	<h3>LINGO-1 architecture</h3>
+<p><span style="font-weight: 400;">As depicted in the diagram below, we 
+train LINGO-1, our open-loop driving model, on various vision and 
+language data sources to perform visual question answering (VQA) on 
+tasks such as perception, counterfactuals, planning, reasoning and 
+attention. LINGO-1 can perform many tasks through simple prompt changes.
+ This allows us to prompt LINGO-1 with questions regarding scene 
+understanding and reasoning about the primary causal factors in the 
+scene affecting the driving decision. In other words, LINGO-1 can 
+provide a description of the </span><i><span style="font-weight: 400;">driving actions and reasoning.</span></i></p>
+	</div>
+</div><div class="single-image width-content">
+	<span>
+	<img width="1920" height="1603" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_open_loop_white-1-1920x1603.png" class="attachment-full-width size-full-width" alt="Diagram of Wayve LINGO-1 open loop driving commentator" decoding="async" srcset="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_open_loop_white-1-1920x1603.png 1920w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_open_loop_white-1-300x250.png 300w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_open_loop_white-1-1024x855.png 1024w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_open_loop_white-1-768x641.png 768w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_open_loop_white-1-1536x1282.png 1536w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_open_loop_white-1-2048x1709.png 2048w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_open_loop_white-1-960x801.png 960w" sizes="(max-width: 1920px) 100vw, 1920px">		</span>
+</div><div class="copy  margins-none">
+	<div class="content">
+	<h3>Driving commentary</h3>
+<p>LINGO-1 can generate a continuous commentary that explains the 
+reasoning behind driving actions. This can help us understand in natural
+ language what the model is paying attention to and what it is doing. 
+Below are a few examples:</p>
+<p><span style="font-weight: 400;">In this first video, LINGO-1 describes the actions it takes when it overtakes a parked car.</span></p>
+<blockquote><p><em>LINGO-1: I’m edging in due to the slow-moving traffic.</em><br>
+<em>LINGO-1: I’m overtaking a vehicle that’s parked on the side.</em><br>
+<em>LINGO-1: I’m accelerating now since the road ahead is clear.</em></p></blockquote>
+	</div>
+</div><div class="single-image width-content">
+	<span>
+	<img width="806" height="453" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve-LINGO-1-Commentary_Overtaking.gif" class="attachment-full-width size-full-width" alt="" decoding="async">		</span>
+</div><div class="copy  margins-none">
+	<div class="content">
+	<p>Below, you can see LINGO-1’s explanation as the car approaches a zebra crossing.</p>
+<blockquote><p><em>LINGO-1: I’m maintaining my speed; the road continues to be clear.</em><br>
+<em>LINGO-1: I’m now decelerating, braking, and coming to a stop.</em><br>
+<em>LINGO-1: Remaining stopped at the zebra crossing.</em><br>
+<em>LINGO-1: I’m now accelerating from a stopped position.</em><br>
+<em>LINGO-1: I’m accelerating as the road is clear.</em></p></blockquote>
+	</div>
+</div><div class="single-image width-content">
+	<span>
+	<img width="800" height="450" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve-LINGO-pedestrian-crossing.gif" class="attachment-full-width size-full-width" alt="" decoding="async">		</span>
+</div><div class="copy  margins-none">
+	<div class="content">
+	<p>Finally, this is LINGO-1’s explanation as it turns left at an intersection.</p>
+<blockquote><p><em>LINGO-1: I’m remaining stationary as the lead vehicle is also stopped</em><br>
+<em>LINGO-1: I’m accelerating now, as we’re clear.</em><br>
+<em>LINGO-1: I’m applying the brakes to stop at the junction.</em><br>
+<em>LINGO-1: I’m moving now because the lane is clear.</em><br>
+<em>LINGO-1: Completing a left turn to follow the route.</em></p></blockquote>
+	</div>
+</div><div class="single-image width-content">
+	<span>
+	<img width="800" height="450" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve-LINGO-T-Junction.gif" class="attachment-full-width size-full-width" alt="" decoding="async">		</span>
+</div><div class="copy  margins-none">
+	<div class="content">
+	<h3>Visual Question and Answer (VQA)</h3>
+<p><span style="font-weight: 400;">In addition to commentary, we can 
+also ask LINGO-1 questions about various driving scenes to evaluate the 
+model’s scene comprehension and understand its reasoning. In the 
+following video clips, you can see how it describes what to do in 
+various situations.</span></p>
+<p><span style="font-weight: 400;">In this first example, we ask LINGO-1 about what it’s paying attention to at this intersection.</span></p>
+	</div>
+</div><div class="single-image width-content">
+	<span>
+	<img width="1920" height="1080" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve-LINGO-1-Intersection-1.gif" class="attachment-full-width size-full-width" alt="" decoding="async">		</span>
+</div><div class="copy  margins-none">
+	<div class="content">
+	<p>We can also ask LINGO-1 about the weather and how it affects its driving.</p>
+	</div>
+</div><div class="single-image width-content">
+	<span>
+	<img width="1344" height="756" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve-LINGO-1-Rain.gif" class="attachment-full-width size-full-width" alt="" decoding="async">		</span>
+</div><div class="copy  margins-none">
+	<div class="content">
+	<p>Finally, here’s an example of how LINGO-1 understands safe driving behaviour around cyclists.</p>
+	</div>
+</div><div class="single-image width-content">
+	<span>
+	<img width="1344" height="756" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve-LINGO-1-Cyclist.gif" class="attachment-full-width size-full-width" alt="" decoding="async">		</span>
+</div><div class="copy  margins-none">
+	<div class="content">
+	<h3>Performance</h3>
+<p>LINGO-1 is around 60% accurate compared to human-level performance. 
+We track LINGO-1’s performance against a set of comprehensive benchmarks
+ which measure its question-answering on various perception, reasoning 
+and driving knowledge tasks.</p>
+	</div>
+</div><div class="single-image width-content">
+	<span>
+	<img width="1720" height="1060" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/LINGO-1-Performance.jpg" class="attachment-full-width size-full-width" alt="" decoding="async" srcset="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/LINGO-1-Performance.jpg 1720w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/LINGO-1-Performance-300x185.jpg 300w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/LINGO-1-Performance-1024x631.jpg 1024w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/LINGO-1-Performance-768x473.jpg 768w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/LINGO-1-Performance-1536x947.jpg 1536w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/LINGO-1-Performance-960x592.jpg 960w" sizes="(max-width: 1720px) 100vw, 1720px">		</span>
+</div><div class="copy  margins-none">
+	<div class="content">
+	<p>In this graph, you can see how LINGO-1’s performance has increased 
+over the last few weeks. Performance has doubled to almost 60% average 
+validation accuracy as we have improved the model architecture and the 
+training datasets. We continue rapidly iterating on LINGO-1 and expect 
+further substantial improvements in the coming weeks.</p>
+	</div>
+</div><div class="copy  margins-none">
+	<div class="content">
+	<h2>What’s next?</h2>
+<p>Including natural language as a new modality can revolutionise autonomous driving in several ways.</p>
+<h3>Advancing AI explainability of end-to-end models</h3>
+<p>The lack of explainability in machine learning models is a common 
+concern, as the decision-making process often seems like a black box. 
+However, by leveraging language, we can shed light on how AI systems 
+make decisions.</p>
+<p>Creating natural language interfaces could allow users to engage in 
+meaningful conversations with AI models, enabling them to question 
+choices and gain insight into scene understanding and decision-making. 
+This unique dialogue between passengers and autonomous vehicles could 
+increase transparency, making it easier for people to understand and 
+trust these systems. Furthermore, integrating language may enhance the 
+model’s ability to adapt and learn from human feedback. Like a driving 
+instructor guiding a student driver, corrective instructions and user 
+feedback could refine the model’s understanding and decision-making 
+processes over time.</p>
+<h3>Improving driving performance through better planning and reasoning</h3>
+<p><span style="font-weight: 400;">In the near future, we aim to harness
+ LINGO’s natural language, reasoning and planning capabilities to 
+enhance our closed-loop driving models. We are examining many different 
+integration architectures, but we show a high-level architecture below. </span></p>
+	</div>
+</div><div class="single-image width-content">
+	<span>
+	<img width="1920" height="1440" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_closed_loop_white-1920x1440.jpg" class="attachment-full-width size-full-width" alt="Diagram of Wayve LINGO-1 closed loop driving model" decoding="async" srcset="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_closed_loop_white-1920x1440.jpg 1920w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_closed_loop_white-300x225.jpg 300w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_closed_loop_white-1024x768.jpg 1024w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_closed_loop_white-768x576.jpg 768w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_closed_loop_white-1536x1152.jpg 1536w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_closed_loop_white-2048x1536.jpg 2048w, LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/blog_diagram_closed_loop_white-960x720.jpg 960w" sizes="(max-width: 1920px) 100vw, 1920px">		</span>
+</div><div class="copy  margins-none">
+	<div class="content">
+	<p><span style="font-weight: 400;">A critical aspect of integrating the
+ language and driving models is grounding between them. The two main 
+factors affecting driving performance are the ability of the language 
+model to accurately interpret scenes using various input modalities and 
+the proficiency of the driving model in translating mid-level reasoning 
+into effective low-level planning.</span></p>
+<h3>Efficient learning for handling new or long-tail scenarios</h3>
+<p><span style="font-weight: 400;">While a picture may be worth a 
+thousand words, a paragraph is worth a thousand images when it comes to 
+training. Let’s look at why. With natural language, we can explain 
+causal factors in the driving scene. For example, instead of needing 
+thousands of training examples of a car slowing down for a pedestrian in
+ the road, we can use a few examples accompanied by a short text 
+description of how to act in a particular situation and other factors to
+ consider. In other words, we can accelerate learning by incorporating a
+ description of the </span><i><span style="font-weight: 400;">driving actions and causal reasoning</span></i><span style="font-weight: 400;"> into the model’s training.&nbsp;</span></p>
+<p><span style="font-weight: 400;">Causal reasoning is vital in 
+autonomous driving, enabling the system to understand the relationships 
+between elements and actions within a scene. A well-grounded VLAM may 
+offer significant improvements in having foundation models identify key 
+causal components and understand the connections between entities in a 
+driving scene. For instance, the system could link pedestrians waiting 
+at a zebra crossing to the traffic signal indicating “do not cross.” 
+This advancement has the potential to significantly improve planning, 
+especially in challenging scenarios with limited data.</span></p>
+<p><span style="font-weight: 400;">In addition, we can incorporate 
+language-derived general-purpose knowledge from LLMs into driving models
+ to enable enhanced generalisation to new, never before seen situations.
+ LLMs already possess vast knowledge of human behaviour from 
+internet-scale datasets, making them capable of understanding concepts 
+like identifying objects, traffic regulations, and driving manoeuvres. 
+For example, language models know the difference between a tree, a shop,
+ a house, a dog chasing a ball, and a bus that’s stopped in front of a 
+school. We can integrate this knowledge into our foundation models to 
+improve the raw intelligence of our system, which could help it tackle 
+challenging, long-tail scenarios where we have limited training 
+examples.&nbsp;</span></p>
+<p><span style="font-weight: 400;">While applying this knowledge to real
+ driving situations remains a challenge, VLAMs offer the potential for 
+better, safer autonomous driving by encoding image data with a broader 
+range of information. This could accelerate the learning process, 
+enhance the model’s accuracy and increase its capability to handle 
+diverse driving tasks. </span></p>
+	</div>
+</div><div class="copy  margins-none">
+	<div class="content">
+	<h2>Limitations</h2>
+<p>LINGO-1 represents a beachhead opportunity, opening up many new 
+possibilities for the safety and interpretability of Embodied AI. While 
+we are excited by the rapid progress of LINGO-1, we want to provide a 
+few words of caution and describe the current limitations of the model.</p>
+<h3>Limited generalisation capabilities</h3>
+<p>Currently, LINGO-1 is trained on Central London driving experiences 
+and internet-scale text. It is best at commenting on UK road rules, 
+although it has learned aspects of global driving cultures from the 
+broad base of knowledge it is trained on. For example, it can state 
+which side of the road you should drive on in various countries 
+worldwide. However, grounding this knowledge in actual driving 
+experience from different countries is one of our next steps.</p>
+<h3>Hallucinations</h3>
+<p>Hallucinations are a well-known problem in large language models; 
+LINGO-1 is no exception. We continue to drive down the frequency and 
+severity of hallucinations through RLHF and other common techniques. 
+However, LINGO-1 has an advantage over standard LLMs, which is worth 
+noting. Since LINGO-1 is grounded in vision, language and action, there 
+are more sources of supervision that allow it to understand the world 
+better. It can learn to reason and align its understanding between text 
+descriptions, what it sees in the video and how it interacts with the 
+world, increasing the sources of information which can allow it to 
+understand casual relationships.</p>
+<h3>Limited temporal context</h3>
+<p>Video deep learning is challenging because video data is typically 
+orders of magnitude larger than image or text datasets. In particular, 
+Video-based Multimodal language models require long context lengths to 
+be able to embed many video frames to reason about complex and dynamic 
+driving scenes. We found working with very-long-context transformer 
+models is incredibly important. Alongside our partner, Microsoft Azure, 
+we are working hard to continue to push the boundaries of scale to 
+improve the performance of LINGO-1.</p>
+<h3><b>Closed-loop reasoning</b></h3>
+<p>Currently, we are working on the explainability of our models, but 
+ultimately, we want the reasoning capabilities of large language models 
+to affect our driving. We are working on a closed-loop architecture that
+ will allow us to run LINGO-1 on-board our fleet of autonomous vehicles 
+in the future.</p>
+	</div>
+</div><div class="copy  margins-none">
+	<div class="content">
+	<h2><span style="font-weight: 400;">Conclusion</span></h2>
+<p>LINGO-1, our open-loop driving commentator, offers an essential first
+ step for enhancing the learning and explainability of our foundation 
+driving models using natural language. While the integration of natural 
+language in training robots is still in its early stages, we are excited
+ to advance this research for end-to-end autonomous driving.</p>
+<p>The potential future applications of this research are thrilling. 
+Imagine the ability to update an autonomous driving system to changes in
+ the Highway Code through a simple text prompt or the possibility of 
+asking a robot car about the upcoming road conditions. Natural language 
+holds great promise in developing safer and more reliable autonomous 
+vehicles.</p>
+<p>If you share our passion for shaping the future of autonomous 
+driving, we invite you to explore our open roles in London or the Bay 
+Area and join us on this exciting journey!</p>
+	</div>
+</div>
+<section class="related-content has-dates">
+	<div>
+					<div>
+				<a href="https://wayve.ai/thinking/scaling-gaia-1/"><img width="512" height="391" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve-GAIA-1-Tech-Blog-Header-512x391.jpg" class="attachment-blog-list-standard size-blog-list-standard" alt="" decoding="async"></a>
+				<p class="date">3 October 2023&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;<a href="https://wayve.ai/thinking/category/research/">Research</a></p>
+				<div>
+					<h3><a href="https://wayve.ai/thinking/scaling-gaia-1/">Scaling GAIA-1: 9-billion parameter generative world model for autonomous driving</a></h3>
+					<p>Discover how we optimised GAIA-1, enhancing this generative 
+world model with larger-scale training that resulted in higher 
+resolution video generation with fine-grained control over ego-vehicle 
+behaviour and scene features.</p>
+					<a href="https://wayve.ai/thinking/scaling-gaia-1/" class="promo-button">Read more<span class="arrow"><span><span>r</span><span>r</span></span></span></a>
+				</div>
+			</div>
+
+				<div>
+				<a href="https://wayve.ai/thinking/introducing-gaia1/"><img width="512" height="391" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/GAIA-1-tile_montage_txt-512x391.jpg" class="attachment-blog-list-standard size-blog-list-standard" alt="" decoding="async"></a>
+				<p class="date">17 June 2023&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;<a href="https://wayve.ai/thinking/category/research/">Research</a></p>
+				<div>
+					<h3><a href="https://wayve.ai/thinking/introducing-gaia1/">Introducing GAIA-1: A Cutting-Edge Generative AI Model for Autonomy</a></h3>
+					<p>GAIA-1 is a new generative AI research model that creates 
+realistic driving videos and offers fine-grained control over 
+ego-vehicle behaviour and driving scene features by leveraging video, 
+text and action inputs. Ideal for research, simulation, and training 
+purposes, it provides endless possibilities for innovation in autonomy.</p>
+					<a href="https://wayve.ai/thinking/introducing-gaia1/" class="promo-button">Read more<span class="arrow"><span><span>r</span><span>r</span></span></span></a>
+				</div>
+			</div>
+
+				<div>
+				<a href="https://wayve.ai/thinking/2023_ai_breakthroughs_apply_to_avs_too/"><img width="512" height="391" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Embodied-AI-Blog-Post2-512x391.jpg" class="attachment-blog-list-standard size-blog-list-standard" alt="Images generated by StableDiffusionXL showing a self-driving car surfing a wave through San Francisco, Amsterdam, New York, London, Paris and Tokyo." decoding="async"></a>
+				<p class="date">23 May 2023&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;<a href="https://wayve.ai/thinking/category/leadership/">Leadership</a></p>
+				<div>
+					<h3><a href="https://wayve.ai/thinking/2023_ai_breakthroughs_apply_to_avs_too/">2023’s AI Breakthroughs Apply to AVs too, accelerating Wayve’s Foundation Model for Embodied AI</a></h3>
+					<p>Alex Kendall, co-founder and CEO of Wayve, shares his thoughts 
+on how recent advances in artificial intelligence will open new 
+possibilities for autonomous driving and other applications of embodied 
+AI.</p>
+					<a href="https://wayve.ai/thinking/2023_ai_breakthroughs_apply_to_avs_too/" class="promo-button">Read more<span class="arrow"><span><span>r</span><span>r</span></span></span></a>
+				</div>
+			</div>
+
+	
+	</div>
+</section>
+
+
+
+
+
+
+</article></main>
+<footer class="theme-light background-barcelona">
+    <div class="info">
+        <div>
+            <p><img decoding="async" class="footer-logo" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/Wayve_logo_portrait.svg" alt="Wayve logo"></p>
+        </div>
+
+        <div>
+            <h6>Contact</h6>
+            <div>
+                <div>
+                    <p><strong>Headquarters, UK</strong><br>
+230-238 York Way<br>
+London, N7 9AG<br>
+United Kingdom</p>
+<p>+44 (0) 20 4574 5971<br>
+<a href="mailto:hello@wayve.ai">hello@wayve.ai</a></p>
+                </div>
+                <div>
+                    <p><strong>Americas</strong><br>
+709 N. Shoreline Blvd<br>
+Mountain View, CA 94303<br>
+United States</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h6>Careers</h6>
+
+            <div class="menu-careers-footer-navigation-container"><ul id="menu-careers-footer-navigation" class="menu"><li id="menu-item-2605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2605"><a href="https://wayve.ai/careers/join-us/">Jobs at Wayve</a></li>
+<li id="menu-item-2606" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2606"><a href="https://wayve.ai/careers/life-at-wayve/">Life at Wayve</a></li>
+<li id="menu-item-2608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2608"><a href="https://wayve.ai/careers/diversity-equity-inclusion/">Diversity, Equity &amp; Inclusion</a></li>
+<li id="menu-item-2607" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2607"><a href="https://wayve.ai/careers/people/">Our people</a></li>
+</ul></div>        </div>
+
+        <div>
+            <h6>Company</h6>
+            <div class="menu-company-footer-navigation-container"><ul id="menu-company-footer-navigation" class="menu"><li id="menu-item-2604" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2604"><a href="https://wayve.ai/technology/">Technology</a></li>
+<li id="menu-item-2600" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2600"><a href="https://wayve.ai/company/our-journey/">Our journey</a></li>
+<li id="menu-item-2601" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2601"><a href="https://wayve.ai/company/leadership-team/">Leadership</a></li>
+<li id="menu-item-2602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2602"><a href="https://wayve.ai/company/investors/">Investors</a></li>
+<li id="menu-item-2603" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2603"><a href="https://wayve.ai/partners/">Partners</a></li>
+<li id="menu-item-1128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1128"><a href="https://wayve.ai/press/">Company news</a></li>
+<li id="menu-item-3243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3243"><a href="https://wayve.ai/contact/">Contact</a></li>
+</ul></div>        </div>
+    </div>
+
+    <div class="social">
+        <a class="twitter" href="https://twitter.com/wayve_ai">twitter</a>
+<a class="linkedin" href="https://www.linkedin.com/company/wayve-technologies/">linkedin</a>
+<a class="youtube" href="https://www.youtube.com/c/wayve">youtube</a>
+    </div>
+
+    <div>
+        <div>
+            <div class="menu-sub-footer-navigation-container"><ul id="menu-sub-footer-navigation" class="menu"><li id="menu-item-2941" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2941"><a href="https://wayve.ai/terms-of-use/">Terms of use</a></li>
+<li id="menu-item-2942" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2942"><a href="https://wayve.ai/privacy-cookies/">Privacy &amp; Cookies</a></li>
+</ul></div>        </div>
+
+        <div>
+            © Wayve 2023. All rights reserved<br>
+            Wayve Technologies Ltd. <br>
+            Registered in England Number: 10924127
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<div id="cookie-banner" style="display: block;">
+	<div class="banner">
+		<div class="text">
+			We use necessary cookies to make our site work and if you agree, 
+analytics cookies to analyse our website traffic. The optional cookies 
+are from Google. For more detail, please see our <a href="https://wayve.ai/privacy-cookies/">Cookies Policy</a>
+		</div>
+
+		<div class="buttons">
+			<a href="#" class="essential-cookies">Essential only<span class="arrow"><span><span>r</span><span>r</span></span></span></a>
+			<a href="#" class="all-cookies default">Accept all<span class="arrow"><span><span>r</span><span>r</span></span></span></a>
+			<a href="#" class="settings">Settings</a>
+		</div>
+	</div>
+</div>
+
+<div id="cookie-form">
+	<div>
+		<form>
+			<label for="necessary-cookies"><input type="checkbox" id="necessary-cookies" checked="checked" disabled="disabled"><div class="check"></div> <span>Necessary</span><br> These cookies are necessary for the website to function and cannot be switched off</label>
+
+			<label for="analytics-cookies"><input type="checkbox" id="analytics-cookies"><div class="check"></div><span>Analytics</span><br>  These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site</label>
+
+			<label for="embedded-cookies"><input type="checkbox" id="embedded-cookies"><div class="check"></div><span>Embedded</span><br>
+ These cookies are set when external content is embedded in the site, 
+for example videos that are hosted by third parties such as YouTube</label>
+
+
+			<div class="buttons"> 
+				<a href="#" class="selected-cookies">Save settings<span class="arrow"><span><span>r</span><span>r</span></span></span></a>
+				<a href="#" class="all-cookies default">Accept all<span class="arrow"><span><span>r</span><span>r</span></span></span></a>
+			</div>
+		</form>
+	</div>
+</div><script type="text/javascript" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/jquery.min.3.7.0.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/jquery-migrate.min.3.4.1.js" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/all.min.1689075810.js" id="wayve-scripts-all-js"></script>
+<link rel="stylesheet" id="wp-block-library-css" href="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/style.min.6.3.1.css" type="text/css" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="LINGO-1%20Exploring%20Natural%20Language%20for%20Autonomous%20Driving%20-%20Wayve_files/classic-themes.min.6.3.1.css" type="text/css" media="all">
+
+
+
+
+    <!-- analytics -->
+    <script>
+        function load_ga() {
+            var s;
+
+            if(window.ga_is_loaded == true) {
+                return;
+            }
+
+
+            s = document.createElement('script');
+            s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=UA-105181479-1');
+            s.async = false;
+            document.head.appendChild(s);
+
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-105181479-1');
+            window.ga_is_loaded = true;
+            // console.log('ga loaded');
+
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:3390525,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+            // console.log('hotjar loaded');
+        }
+ 
+    </script>
+    
+
+
+
+
+</body></html>
+<!-- 42 queries in 0.277 seconds. -->
